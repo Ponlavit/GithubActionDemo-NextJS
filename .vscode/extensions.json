@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "ms-vscode.vscode-typescript-next",
+    "pmneo.tsimporter",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "rvest.vs-code-prettier-eslint",
+    "redhat.vscode-yaml",
+    "nucllear.vscode-extension-auto-import",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "foxundermoon.next-js",
+    "jpoissonnier.vscode-styled-components"
+  ]
+}

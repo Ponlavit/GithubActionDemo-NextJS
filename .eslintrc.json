@@ -1,0 +1,79 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:security/recommended",
+    "airbnb",
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:jest/recommended",
+    "plugin:jest/style",
+    "next",
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "ignorePatterns": ["jest.setup.js", "jest.config.js"],
+  "plugins": ["react", "jest", "security"],
+  "rules": {
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+    "react/react-in-jsx-scope": "off",
+    "semi": 2,
+    "import/prefer-default-export": "off",
+    "arrow-body-style": "off",
+    "no-console": "off",
+    "class-methods-use-this": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".jsx"] }],
+    "react/jsx-props-no-spreading": [1, { "html": "ignore", "exceptions": ["Component"] }],
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": ["**/*.test.*", "**/*.spec.*"] }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "function-declaration",
+        "unnamedComponents": "arrow-function"
+      }
+    ]
+  },
+  "globals": {
+    "React": "writable"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
