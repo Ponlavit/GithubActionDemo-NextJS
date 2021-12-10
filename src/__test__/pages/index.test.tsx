@@ -9,14 +9,14 @@ describe('Test page:Home', () => {
   afterEach(cleanup);
 
   it('render text', () => {
-    const { getByText } = render(<Home />);
-    const title = getByText(/hello world/i);
+    const { getByTestId } = render(<Home />);
+    const title = getByTestId('txt.title.hello');
     expect(title).toBeInTheDocument();
   });
 
   it('render button', () => {
     const { getByTestId } = render(<Home />);
-    const button = getByTestId('button');
+    const button = getByTestId('btn.codeit');
     expect(button).toBeInTheDocument();
   });
 });
