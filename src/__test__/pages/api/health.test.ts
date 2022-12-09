@@ -15,6 +15,6 @@ describe('Test api health check', () => {
     };
     hello(mockReq, mockRes);
     expect(mockRes.statusCode).toBe(200);
-    expect(respondJson).toMatchObject({ name: 'OK' });
+    expect(respondJson).toMatchObject({ name: 'OK Krub' });
   });
 });
