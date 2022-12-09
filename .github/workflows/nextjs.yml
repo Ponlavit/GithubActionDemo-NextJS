@@ -67,9 +67,23 @@ jobs:
           path: ./out
 
   # Deployment job
-  deploy:
+  deploy_stg:
     runs-on: ubuntu-latest
     needs: build
     steps:
       - name: Deploy
-        run: echo "Deploy"
+        run: echo "Deploy to Stg"
+
+  full_suit_test:
+    runs-on: ubuntu-latest
+    needs: deploy_stg
+    steps:
+      - name: Test Automate
+        run: echo "Test to Stg"
+
+  deploy_prod:
+    runs-on: ubuntu-latest
+    needs: full_suit_test
+    steps:
+      - name: Test Automate
+        run: echo "Test to Prod"

@@ -66,17 +66,3 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./out
-
-  full_suit_test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Test Automate
-        run: echo "Test to Prod"
-
-  # Deployment job
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy
-        run: echo "Deploy to Prod"
