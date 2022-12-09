@@ -67,6 +67,12 @@ jobs:
         with:
           path: ./out
 
+  full_suit_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Automate
+        run: echo "Test to Prod"
+
   # Deployment job
   deploy:
     runs-on: ubuntu-latest
